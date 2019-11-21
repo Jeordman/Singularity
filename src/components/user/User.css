@@ -1,0 +1,21 @@
+.specific-user-holder{
+    display: flex;
+    margin-bottom: 3vh;
+}
+
+.image-request{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-left: 60px;
+    border-style: solid;
+    border-color: #dda0dd;
+    margin-top: 2vh;   
+}
+
+.pics-name{
+    font-size: 20px;
+    color: white;
+    margin-top: 1.5vh;
+    margin-left: 30px;
+}
