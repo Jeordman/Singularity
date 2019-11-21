@@ -18,6 +18,7 @@ let returnStr = "/";
 const { SERVER_PORT } = process.env;
 const app = express();
 
+app.use( express.static( `${__dirname}/../build` ) );
 
 massive(process.env.CONNECTION_STRING)
 .then(db => {
@@ -146,15 +147,15 @@ app.get("/api/getUser", (req, res, next) => {
 app.get(
   "/api/login",
   passport.authenticate("auth0", {
-    failureRedirect: `http://localhost:3000/#/`
+    failureRedirect: `http://167.172.200.40:3000/#/`
   }),
   (req, res) => {
-    res.redirect(`http://localhost:3000/#/`);
+    res.redirect(`http://167.172.200.40:3000/#/`);
   }
   );
   app.get(`/api/logout`, (req, res) => {
     req.logout();
-    let returnTo = "http://localhost:3000/";
+    let returnTo = "http://167.172.200.40:3000/";
     res.redirect(
       `https://${process.env.DOMAIN}/v2/logout?returnTo=${returnTo}&client_id=${process.env.CLIENT_ID}`
       );
