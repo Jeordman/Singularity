@@ -159,7 +159,7 @@ function Homepage(props) {
 
   function logout() {
     // props.logout()
-    window.location.href = "http://localhost:4000/api/logout";
+    window.location.href = "http://167.172.200.40:4000/api/logout";
   }
 
   if (!props.user.loggedIn) return <Redirect to="/" />;

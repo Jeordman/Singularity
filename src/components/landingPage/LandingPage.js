@@ -18,7 +18,7 @@ class LandingPage extends Component {
     }
   }
   userLogin = () => {
-    window.location.href = "http://localhost:4000/api/login";
+    window.location.href = "http://167.172.200.40:4000/api/login";
   };
   render() {
     if (this.props.user.loggedIn) return <Redirect to="/home/0/0" />;
